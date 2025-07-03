@@ -25,7 +25,8 @@ def process():
         # Скачивание видео через yt_dlp
         ydl_opts = {
             'outtmpl': original_path,
-            'format': 'best'
+            'format': 'best',
+            'cookiefile': 'cookies.txt'
         }
 
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
