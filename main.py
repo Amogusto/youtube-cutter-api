@@ -26,8 +26,10 @@ def process():
         ydl_opts = {
             'outtmpl': original_path,
             'format': 'best',
-            'cookiefile': 'cookies.txt'
+            'cookiefile': None,
+            'cookiesfrombrowser': ('chromium',)
         }
+
 
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             ydl.download([url])
